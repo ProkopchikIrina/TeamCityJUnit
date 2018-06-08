@@ -4,42 +4,37 @@ import static java.lang.Double.NaN;
  * Created by Irina on 30.03.2018.
  */
 
-class Calculator {
-    double addition(double number1, double number2) {
+public class Calculator {
+    public double addition(double number1, double number2) {
         return round(number1 + number2);
     }
 
-    double subtraction(double number1, double number2) {
+    public double subtract(double number1, double number2) {
         return round(number1 - number2);
     }
 
-    double multiplication(double number1, double number2) {
+    public double multiply(double number1, double number2) {
         return round(number1 * number2);
     }
 
-    double division(double number1, double number2) {
+    public double divide(double number1, double number2) {
         if(number2!=0) {
             return round(number1 / number2);
         }
-        else {
-            return NaN;
-        }
+        return NaN;
     }
-    double sqrt(double number) {
+    public double sqrt(double number) {
         if(number>=0) {
             return round(Math.sqrt(number));
         }
-        else
-        {
-            return NaN;
-        }
+        return NaN;
     }
 
-    double percent(double number1, double number2) {
+    public double percent(double number1, double number2) {
         return round(number1 * number2 / 100);
     }
 
-    double pow(double number1, double number2) {
+    public double pow(double number1, double number2) {
         return round(Math.pow(number1,number2));
     }
 
